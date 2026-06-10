@@ -1,0 +1,8 @@
+{
+  "name": "Milen's Vault",
+  "description": "A private digital space featuring personal collections, mood playlists, story fragments, K-drama lists, anime rankings, and secret thoughts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
