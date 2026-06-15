@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Moon, Play, Pause, RotateCcw, Brain } from 'lucide-react';
+import { Moon, Star, Play, Pause, RotateCcw, Brain } from 'lucide-react';
 
 interface Props {
   onUnlock: () => void;
@@ -18,10 +18,10 @@ export function DistractionApp({ onUnlock }: Props) {
   const [thought, setThought] = useState('');
   const [fadingThought, setFadingThought] = useState('');
 
-  const handleMoonClick = () => {
+  const handleStarClick = () => {
     const newCount = clickCount + 1;
     setClickCount(newCount);
-    if (newCount >= 5) {
+    if (newCount >= 3) {
       onUnlock();
     }
   };
@@ -66,16 +66,16 @@ export function DistractionApp({ onUnlock }: Props) {
   return (
     <div className="fixed inset-0 bg-stone-950 text-stone-300 font-sans flex flex-col items-center justify-center overflow-hidden">
       
-      {/* Hidden Moon */}
+      {/* Hidden Star */}
       <div className="absolute bottom-8 left-8 z-50">
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          onClick={handleMoonClick}
-          className="text-stone-900 hover:text-slate-400 transition-all duration-700 opacity-50 hover:opacity-100 hover:drop-shadow-[0_0_8px_rgba(148,163,184,0.4)]"
-          title="Just a moon..."
+          onClick={handleStarClick}
+          className="text-stone-900 hover:text-amber-300 transition-all duration-700 opacity-50 hover:opacity-100 hover:drop-shadow-[0_0_8px_rgba(252,211,77,0.4)]"
+          title="Just a star..."
         >
-          <Moon className="w-8 h-8" />
+          <Star className="w-8 h-8" />
         </motion.button>
       </div>
 

@@ -50,8 +50,8 @@ export function Home() {
           </h3>
           <p className="text-stone-800 text-sm mb-4 italic">"Three minds. One brain cell."</p>
           <ul className="space-y-3 text-stone-600 text-sm">
-            <li className="flex items-center gap-2"><Moon className="w-4 h-4 text-amber-400 fill-amber-400/20"/> <strong>Coco</strong> (Milen)</li>
-            <li className="flex items-center gap-2"><Star className="w-4 h-4 text-amber-300 fill-amber-300/20"/> <strong>Loco</strong> (Diya Maryam)</li>
+            <li className="flex items-center gap-2"><Star className="w-4 h-4 text-amber-300 fill-amber-300/20"/> <strong>Coco</strong> (Milen)</li>
+            <li className="flex items-center gap-2"><Moon className="w-4 h-4 text-amber-400 fill-amber-400/20"/> <strong>Loco</strong> (Diya Maryam)</li>
             <li className="flex items-center gap-2"><Sun className="w-4 h-4 text-yellow-500 fill-yellow-500/20"/> <strong>Poco</strong> (Shreya Soorej)</li>
           </ul>
         </div>
