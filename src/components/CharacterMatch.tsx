@@ -75,14 +75,18 @@ export function CharacterMatch() {
   };
 
   const getPercentageBreakdown = () => {
-    const total = Object.values(scores).reduce((a, b) => a + b, 0);
+    const scoresArray = Object.values(scores) as number[];
+    const total = scoresArray.reduce((a, b) => a + b, 0);
     if (total === 0) return [];
     
     return Object.keys(scores)
-      .map(char => ({
-        character: char,
-        percentage: Math.round((scores[char] / total) * 100)
-      }))
+      .map(char => {
+        const scoreVal = (scores[char] as number) || 0;
+        return {
+          character: char,
+          percentage: Math.round((scoreVal / total) * 100)
+        };
+      })
       .filter(item => item.percentage > 0)
       .sort((a, b) => b.percentage - a.percentage);
   };

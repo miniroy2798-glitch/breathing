@@ -5,6 +5,7 @@ export interface Drama {
   title: string;
   status?: string;
   note?: string;
+  rank?: number;
 }
 
 export interface Anime {
@@ -17,4 +18,19 @@ export interface Anime {
 export interface Webtoon {
   id: string;
   title: string;
+  status?: string;
+  note?: string;
+  rank?: number;
 }
+
+export interface FictionalCrush {
+  id: string;
+  name: string;
+  series?: string;
+  imageUrl?: string;
+  note?: string;
+  rank: number;
+  imagePosition?: string;
+  imageZoom?: string;
+}
+
